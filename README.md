@@ -1,4 +1,4 @@
-# Zero-Copy Loader
+# ZC-Loader
 
 高速なゼロコピーストリーミングI/Oレイヤー。mmap + io_uring（Linux）ベースのデータローダーで、MLの学習・推論時のデータローディングを高速化します。
 
