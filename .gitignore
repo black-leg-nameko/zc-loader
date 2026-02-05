@@ -1,0 +1,477 @@
+# =============================================================================
+# Zero-Copy Loader - .gitignore
+# ベストプラクティスとビジネス環境を考慮した包括的な設定
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Rust関連
+# -----------------------------------------------------------------------------
+# Cargoビルド成果物
+**/target/
+**/Cargo.lock
+# 注: ライブラリプロジェクトではCargo.lockを除外するのが一般的ですが、
+#     バイナリプロジェクトやアプリケーションでは含めることが推奨されます
+
+# Rustの一時ファイル
+*.rs.bk
+*.pdb
+
+# -----------------------------------------------------------------------------
+# Python関連
+# -----------------------------------------------------------------------------
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python仮想環境
+.venv/
+venv/
+ENV/
+env/
+.conda/
+
+# Pythonパッケージング・配布物
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+pip-selfcheck.json
+
+# Unit test / coverage reports
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+htmlcov/
+.nyc_output/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# -----------------------------------------------------------------------------
+# IDE・エディタ設定
+# -----------------------------------------------------------------------------
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+
+# IntelliJ IDEA / PyCharm / CLion
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.recommenders
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# -----------------------------------------------------------------------------
+# OS固有ファイル
+# -----------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# -----------------------------------------------------------------------------
+# 機密情報・認証情報（ビジネス環境で重要）
+# -----------------------------------------------------------------------------
+# 環境変数ファイル
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+*.env
+
+# APIキー・認証情報
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+*.jks
+*.keystore
+credentials.json
+secrets.json
+config.local.*
+*.secret
+*.private
+
+# パスワードファイル
+passwords.txt
+*.passwd
+
+# AWS認証情報
+.aws/
+*.aws
+
+# Google Cloud認証情報
+.gcloud/
+*.json
+!package.json
+!tsconfig.json
+!*.config.json
+service-account*.json
+*-credentials.json
+
+# Azure認証情報
+.azure/
+
+# SSH鍵（公開鍵は含めても良いが、秘密鍵は絶対に含めない）
+*.rsa
+*.rsa.pub
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+id_ecdsa
+id_ecdsa.pub
+known_hosts
+authorized_keys
+
+# GPG鍵
+*.gpg
+*.asc
+*.pgp
+
+# -----------------------------------------------------------------------------
+# ビルド成果物・バイナリファイル
+# -----------------------------------------------------------------------------
+# コンパイル済みバイナリ
+*.exe
+*.out
+*.app
+*.dll
+*.dylib
+*.so
+*.a
+*.lib
+*.o
+*.obj
+*.pyd
+
+# アーカイブ
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.gz
+*.bz2
+*.xz
+
+# -----------------------------------------------------------------------------
+# ログ・一時ファイル
+# -----------------------------------------------------------------------------
+*.log
+*.log.*
+logs/
+*.tmp
+*.temp
+*.cache
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*.swp
+*.swo
+*~
+
+# -----------------------------------------------------------------------------
+# ドキュメント生成物
+# -----------------------------------------------------------------------------
+# Sphinx
+docs/_build/
+docs/.doctrees/
+docs/_static/
+docs/_templates/
+
+# MkDocs
+site/
+
+# Jekyll
+_site/
+.sass-cache/
+
+# -----------------------------------------------------------------------------
+# テスト・ベンチマーク関連
+# -----------------------------------------------------------------------------
+# ベンチマーク結果
+bench/results/
+bench/output/
+*.bench
+*.perf
+
+# テストデータ（大きなファイル）
+test_data/
+test_datasets/
+*.testdata
+*.test.bin
+*.test.dat
+
+# プロファイリング結果
+*.prof
+*.pprof
+perf.data*
+flamegraph.svg
+
+# -----------------------------------------------------------------------------
+# CI/CD関連
+# -----------------------------------------------------------------------------
+# GitHub Actions
+.github/workflows/*.local.yml
+
+# GitLab CI
+.gitlab-ci-local.yml
+
+# CircleCI
+.circleci/local.yml
+
+# Jenkins
+.jenkins/
+
+# ローカルCI設定
+ci/local/
+ci/*.local.*
+
+# -----------------------------------------------------------------------------
+# データファイル・データセット
+# -----------------------------------------------------------------------------
+# 大きなデータファイル（必要に応じて調整）
+*.bin
+*.dat
+*.data
+*.h5
+*.hdf5
+*.parquet
+*.feather
+*.arrow
+!**/test/**/*.bin
+!**/test/**/*.dat
+
+# シャードファイル（データファイル）
+shards/
+*.shard
+shard*.bin
+
+# データセット
+datasets/
+data/
+*.dataset
+
+# -----------------------------------------------------------------------------
+# その他
+# -----------------------------------------------------------------------------
+# 一時的なマウントポイント
+mnt/
+tmp/
+temp/
+
+# ローカル設定ファイル
+local_settings.py
+local_config.*
+*.local.*
+
+# パッケージマネージャー
+node_modules/
+.npm
+.yarn/
+package-lock.json
+yarn.lock
+
+# データベース
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# メモ・ノート（個人用）
+notes/
+TODO.local
+*.note
+*.memo
+
+# -----------------------------------------------------------------------------
+# プロジェクト固有
+# -----------------------------------------------------------------------------
+# ベンチマーク出力
+bench/results/
+bench/output/
+*.benchmark
+
+# プロファイリング出力
+*.perf
+*.flamegraph
+
+# 実験的なコード
+experiments/
+scratch/
+sandbox/
